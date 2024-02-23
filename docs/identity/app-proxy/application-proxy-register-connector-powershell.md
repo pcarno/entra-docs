@@ -55,10 +55,10 @@ There are two methods you can use to register the connector:
    $SecurePassword = $PlainPassword | ConvertTo-SecureString -AsPlainText -Force
    $cred = New-Object –TypeName System.Management.Automation.PSCredential –ArgumentList $User, $SecurePassword
    ```
-2. Go to `C:\Program Files\Microsoft Azure AD App Proxy Connector` and run the following script using the `$cred` object that you created:
+2. Go to `C:\Program Files\Microsoft Entra Private Network Connector` and run the following script using the `$cred` object that you created:
 
    ```powershell
-   .\RegisterConnector.ps1 -modulePath "C:\Program Files\Microsoft AAD App Proxy Connector\Modules\" -moduleName "AppProxyPSModule" -Authenticationmode Credentials -Usercredentials $cred -Feature ApplicationProxy -TenantId $TenantId
+   .\RegisterConnector.ps1 -modulePath "C:\Program Files\Microsoft Entra Private Network Connector\Modules\" -moduleName "AppProxyPSModule" -Authenticationmode Credentials -Usercredentials $cred -Feature ApplicationProxy -TenantId $TenantId
    ```
 
 ### Register the connector using a token created offline
